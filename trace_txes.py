@@ -42,7 +42,11 @@ class TXO:
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         print("TAX: ",tx)
+        print("N: ",n)
 
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
+
+# x = TXO()
+# print("X: ",x)
