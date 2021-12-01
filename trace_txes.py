@@ -58,9 +58,6 @@ class TXO:
         print("CLS: ",c.amount)
         c = cls(tx_hash,n,amount,address,9)
         return c
-    def get_inputs(self,d=1):
-        pass
+    # def get_inputs(self,d=1):
+    #     pass
         #YOUR CODE HERE
-
-# x = TXO()
-# print("X: ",x)
