@@ -54,8 +54,7 @@ class TXO:
                 print("ADDY: ",t["scriptPubKey"]["addresses"][0])
                 address = t["scriptPubKey"]["addresses"][0]
                 
-        print("N: ",n)
-        print("CLS: ",c.amount)
+        
         c = cls(tx_hash,n,amount,address,9)
         return c
     # def get_inputs(self,d=1):
