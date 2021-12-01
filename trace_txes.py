@@ -66,8 +66,8 @@ class TXO:
             self.address=address
             
             print("AMOUNT: ",self.amount)
-            print("AMOUNT: ",self.address)
-            print("Input: ",self.inputs[i])
+            print("Address: ",self.address)
+            print("Input: ",self.inputs[count])
             self.inputs.append(self)
             if count==d:
                 break
