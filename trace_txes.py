@@ -46,6 +46,7 @@ class TXO:
         print("TAX: ",tx)
         print("TAX-add: ",tx["hash"])
         print("TIME: ",tx["time"])
+        print("TIME-DATE: ",datetime.datetime(tx["time"]))
         for t in tx["vout"]:
             print("T-N: ",t["n"])
             if(n==t["n"]):
