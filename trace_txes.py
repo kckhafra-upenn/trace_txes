@@ -73,7 +73,7 @@ class TXO:
         
         self.inputs.append(lists)
         d=d-1
-        if(d=0):
+        if(d==0):
             return self
 
             
