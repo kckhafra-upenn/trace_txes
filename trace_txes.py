@@ -60,6 +60,7 @@ class TXO:
         time = datetime.fromtimestamp(tx["time"])
         for t in tx["vout"]:
             count+=1
+            print("COUNT: ",count)
             amount = int(str(t["value"]).replace(".",""))
             address = t["scriptPubKey"]["addresses"][0]
             self.amount=amount
