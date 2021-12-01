@@ -41,12 +41,13 @@ class TXO:
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
+        c = cls(cls,tx_hash,n,50,"kc",9)
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
         for t in tx["vout"]:
             print("T-N: ",t["n"])
         print("N: ",n)
-        print("CLS: ",cls["amount"])
+        print("CLS: ",c)
 
 
     def get_inputs(self,d=1):
