@@ -52,4 +52,4 @@ class TXO:
         return c
     def get_inputs(self,d=1):
         pass
-        YOUR CODE HERE
+        #YOUR CODE HERE
