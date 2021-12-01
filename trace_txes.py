@@ -51,15 +51,27 @@ class TXO:
         return c
     def get_inputs(self,d=1):
         tx = rpc_connection.getrawtransaction(self.tx_hash,True)
+        count=0
         print("I-TX: ",tx)
         pass
         #YOUR CODE HERE
-        print("D",d)
-        for i in range(d):
-            self.inputs.append(self)
-            print("Input: ",self.inputs)
-            print("HASH: ",self.tx_hash)
+        amount = 0
+        address = ""
+        time = datetime.fromtimestamp(tx["time"])
+        for t in tx["vout"]:
+            count+=1
+            amount = int(str(t["value"]).replace(".",""))
+            address = t["scriptPubKey"]["addresses"][0]
+            self.amount=amount
+            self.address=address
+            
             print("AMOUNT: ",self.amount)
-            print("TIME: ",self.time)
+            print("AMOUNT: ",self.address)
+            print("Input: ",self.inputs[i])
+            self.inputs.append(self)
+            if count==d:
+                break
+        print("TIME: ",self.time)
+        print("HASH: ",self.tx_hash)
         return self.inputs
             
