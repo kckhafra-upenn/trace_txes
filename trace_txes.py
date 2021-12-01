@@ -69,8 +69,7 @@ class TXO:
             print("Address: ",self.address)
             
             self.inputs.append(self)
-            # print("Input: ",self.inputs[0])
-            count=+1
+            count+=1
             if count==(d-1):
                 break
         print("TIME: ",self.time)
