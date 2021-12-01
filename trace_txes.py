@@ -56,7 +56,10 @@ class TXO:
         #YOUR CODE HERE
         print("D",d)
         for i in range(d):
-            self.inputs.append(self())
-            print("SELF: ",self.inputs)
+            self.inputs.append(self)
+            print("Input: ",self.inputs)
+            print("HASH: ",self.tx_hash)
+            print("AMOUNT: ",self.amount)
+            print("TIME: ",self.time)
         return self.inputs
             
