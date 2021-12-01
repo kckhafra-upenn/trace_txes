@@ -50,7 +50,7 @@ class TXO:
         c = cls(tx_hash,n,amount,address,time)
         return c
     def get_inputs(self,d=1):
-        tx = rpc_connection.getrawtransaction(tx_hash,True)
+        tx = rpc_connection.getrawtransaction(self.tx_hash,True)
         print("I-TX: ",tx)
         pass
         #YOUR CODE HERE
