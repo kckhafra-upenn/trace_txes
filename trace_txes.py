@@ -42,6 +42,7 @@ class TXO:
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         amount = 0
+        address = ""
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
         print("TAX-add: ",tx["hash"])
@@ -51,11 +52,12 @@ class TXO:
                 print("VALUE: ",t["value"])
                 amount = t["value"]
                 print("ADDY: ",t["scriptPubKey"]["addresses"][0])
+                address = t["scriptPubKey"]["addresses"][0]
                 
         print("N: ",n)
         print("CLS: ",c.amount)
-        c = cls(tx_hash,n,amount,"kc",9)
-
+        c = cls(tx_hash,n,amount,address,9)
+        return c
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
