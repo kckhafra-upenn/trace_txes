@@ -60,7 +60,7 @@ class TXO:
             vin_tx = self.from_tx_hash(v["txid"],v["vout"])
             lists.append(vin_tx)
         
-        self.inputs.append(lists)
+        self.inputs.append("a")
         d=d-1
         if(d==0):
             return self
