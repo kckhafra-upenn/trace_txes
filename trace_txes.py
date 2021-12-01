@@ -50,6 +50,6 @@ class TXO:
                 address = t["scriptPubKey"]["addresses"][0]
         c = cls(tx_hash,n,amount,address,time)
         return c
-    # def get_inputs(self,d=1):
-    #     pass
-        #YOUR CODE HERE
+    def get_inputs(self,d=1):
+        pass
+        YOUR CODE HERE
