@@ -61,15 +61,6 @@ class TXO:
             vin_tx = self.from_tx_hash(v["txid"],v["vout"])
             print("V",vin_tx)
             lists.append(vin_tx)
-            # count=count+1
-            # amount = int(str(t["value"]).replace(".",""))
-            # address = t["scriptPubKey"]["addresses"][0]
-            # self.amount=amount
-            # self.address=address
-            
-            # self.inputs.append(self)
-            # if count==(d):
-            #     break
         
         self.inputs.append(lists)
         d=d-1
