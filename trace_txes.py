@@ -60,20 +60,13 @@ class TXO:
         time = datetime.fromtimestamp(tx["time"])
         for t in tx["vout"]:
             count=count+1
-            print("COUNT: ",count)
             amount = int(str(t["value"]).replace(".",""))
             address = t["scriptPubKey"]["addresses"][0]
             self.amount=amount
             self.address=address
             
-            print("AMOUNT: ",self.amount)
-            print("Address: ",self.address)
-            
             self.inputs.append(self)
-            # print("Input: ",self.inputs[0])
             if count==(d):
                 break
-        print("TIME: ",self.time)
-        print("HASH: ",self.tx_hash)
         return self.inputs
             
