@@ -41,7 +41,7 @@ class TXO:
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
-        print("TAX: ",tx)
+        print("TAX: ",tx["txid"])
         print("N: ",n)
         print("CLS: ")
 
