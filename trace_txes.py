@@ -56,7 +56,7 @@ class TXO:
         #YOUR CODE HERE
         print("D",d)
         for i in range(d):
-            self.inputs.append(self)
+            self.inputs.append(self())
             print("SELF: ",self.inputs)
         return self.inputs
             
