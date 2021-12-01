@@ -44,8 +44,12 @@ class TXO:
         c = cls(tx_hash,n,50,"kc",9)
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
+        print("TAX-add: ",tx["hash"])
         for t in tx["vout"]:
             print("T-N: ",t["n"])
+            if(n==t["n"]):
+                print("VALUE: ",t["value"])
+                
         print("N: ",n)
         print("CLS: ",c.amount)
 
