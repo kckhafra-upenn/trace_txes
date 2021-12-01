@@ -38,7 +38,6 @@ class TXO:
 
     @classmethod
     def from_tx_hash(cls,tx_hash,n=0):
-        pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         amount = 0
@@ -53,3 +52,4 @@ class TXO:
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
+        print("SELF: ",self)
