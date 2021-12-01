@@ -56,15 +56,16 @@ class TXO:
         amount = 0
         address = ""
         time = datetime.fromtimestamp(tx["time"])
-        for t in tx["vout"]:
-            count=count+1
-            amount = int(str(t["value"]).replace(".",""))
-            address = t["scriptPubKey"]["addresses"][0]
-            self.amount=amount
-            self.address=address
+        for v in tx["vin"]:
+            print("V",v)
+            # count=count+1
+            # amount = int(str(t["value"]).replace(".",""))
+            # address = t["scriptPubKey"]["addresses"][0]
+            # self.amount=amount
+            # self.address=address
             
-            self.inputs.append(self)
-            if count==(d):
-                break
+            # self.inputs.append(self)
+            # if count==(d):
+            #     break
         return self
             
