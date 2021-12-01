@@ -58,7 +58,7 @@ class TXO:
         time = datetime.fromtimestamp(tx["time"])
         for v in tx["vin"]:
             vin_tx = self.from_tx_hash(v["txid"],v["vout"])
-            lists.append(vin_tx)
+            # lists.append(vin_tx)
         
         # self.inputs.append(lists)
         d=d-1
