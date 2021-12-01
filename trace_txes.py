@@ -41,7 +41,7 @@ class TXO:
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
-        amount = 0.0
+        amount = 0
         address = ""
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
@@ -50,7 +50,7 @@ class TXO:
             print("T-N: ",t["n"])
             if(n==t["n"]):
                 print("VALUE: ",t["value"])
-                amount = t["value"]
+                amount = int(t["value"])
                 print("ADDY: ",t["scriptPubKey"]["addresses"][0])
                 address = t["scriptPubKey"]["addresses"][0]
                 
