@@ -64,6 +64,6 @@ class TXO:
         d=d-1
         if(d==0):
             return self
-        get_inputs(self,d)
+        self.get_inputs(self,d)
 
             
