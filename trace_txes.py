@@ -14,7 +14,7 @@ rpc_connection = AuthServiceProxy("http://%s:%s@%s:%s"%(rpc_user, rpc_password, 
 class TXO:
     def __init__(self, tx_hash, n, amount, owner, time ):
         self.tx_hash = tx_hash 
-        self.n = 1
+        self.n = n
         self.amount = amount
         self.owner = owner
         self.time = time
@@ -43,6 +43,7 @@ class TXO:
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         print("TAX: ",tx)
         print("N: ",n)
+        print("Amount: ",amount)
 
     def get_inputs(self,d=1):
         pass
