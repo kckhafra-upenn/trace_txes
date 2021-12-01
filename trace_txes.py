@@ -37,7 +37,7 @@ class TXO:
         return json.dumps(json_dict, sort_keys=True, indent=4)
 
     @classmethod
-    def from_tx_hash(cls,tx_hash,n=0):
+    def from_tx_hash(cls,tx_hash,n=1):
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
