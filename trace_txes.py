@@ -52,8 +52,6 @@ class TXO:
     def get_inputs(self,d=1):
         tx = rpc_connection.getrawtransaction(self.tx_hash,True)
         count=0
-        print("I-TX: ",tx)
-        pass
         #YOUR CODE HERE
         amount = 0
         address = ""
