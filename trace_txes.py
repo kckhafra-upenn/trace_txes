@@ -51,7 +51,7 @@ class TXO:
         return c
     def get_inputs(self,d=1):
         # lists=[]
-        tx = rpc_connection.getrawtransaction(self.tx_hash,True)
+        # tx = rpc_connection.getrawtransaction(self.tx_hash,True)
         #YOUR CODE HERE
 
         # for v in tx["vin"]:
@@ -63,5 +63,6 @@ class TXO:
         # if(d==0):
         #     return self
         # self.get_inputs(d)
+        pass
 
             
