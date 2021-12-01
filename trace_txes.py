@@ -43,7 +43,7 @@ class TXO:
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         print("TAX: ",tx)
         print("N: ",n)
-        print("CLS: ",cls)
+        print("CLS: ",cls.amount)
 
     def get_inputs(self,d=1):
         pass
