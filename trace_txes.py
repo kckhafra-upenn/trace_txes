@@ -14,7 +14,7 @@ rpc_connection = AuthServiceProxy("http://%s:%s@%s:%s"%(rpc_user, rpc_password, 
 class TXO:
     def __init__(self, tx_hash, n, amount, owner, time ):
         self.tx_hash = tx_hash 
-        self.n = n
+        self.n = 1
         self.amount = amount
         self.owner = owner
         self.time = time
@@ -37,7 +37,7 @@ class TXO:
         return json.dumps(json_dict, sort_keys=True, indent=4)
 
     @classmethod
-    def from_tx_hash(cls,tx_hash,n=2):
+    def from_tx_hash(cls,tx_hash,n=0):
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
