@@ -46,7 +46,7 @@ class TXO:
         for t in tx["vout"]:
             print("T-N: ",t["n"])
         print("N: ",n)
-        print("CLS: ")
+        print("CLS: ",cls["amount"])
 
 
     def get_inputs(self,d=1):
