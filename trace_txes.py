@@ -47,6 +47,7 @@ class TXO:
         print("TAX-add: ",tx["hash"])
         print("TIME: ",tx["time"])
         print("TIME-DATE: ",datetime.fromtimestamp(tx["time"]))
+        time = datetime.fromtimestamp(tx["time"])
         for t in tx["vout"]:
             print("T-N: ",t["n"])
             if(n==t["n"]):
@@ -56,7 +57,7 @@ class TXO:
                 address = t["scriptPubKey"]["addresses"][0]
                 
         
-        c = cls(tx_hash,n,amount,address,9)
+        c = cls(tx_hash,n,amount,address,time)
         return c
     # def get_inputs(self,d=1):
     #     pass
