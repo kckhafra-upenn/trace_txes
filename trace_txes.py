@@ -41,7 +41,7 @@ class TXO:
         pass
         #YOUR CODE HERE
         tx = rpc_connection.getrawtransaction(tx_hash,True)
-        amount = 0
+        amount = 0.0
         address = ""
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
