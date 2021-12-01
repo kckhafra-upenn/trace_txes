@@ -61,9 +61,9 @@ class TXO:
             # lists.append(vin_tx)
         
         # self.inputs.append(lists)
-        d=d-1
-        if(d==0):
-            return self
+        # d=d-1
+        # if(d==0):
+        #     return self
         # self.get_inputs(d)
 
             
