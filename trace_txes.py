@@ -52,4 +52,4 @@ class TXO:
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
-        print("SELF: ",self.amount)
+        print("SELF: ",self.input)
