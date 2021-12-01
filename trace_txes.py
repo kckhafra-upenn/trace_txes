@@ -19,6 +19,7 @@ class TXO:
         self.owner = owner
         self.time = time
         self.inputs = []
+        
 
     def __str__(self, level=0):
         ret = "\t"*level+repr(self.tx_hash)+"\n"
@@ -39,8 +40,9 @@ class TXO:
     def from_tx_hash(cls,tx_hash,n=0):
         pass
         #YOUR CODE HERE
+        tx = rpc_connection.getrawtransaction(tx_hash,True)
+        print(tx)
 
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
-
