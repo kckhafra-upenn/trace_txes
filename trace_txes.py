@@ -50,7 +50,7 @@ class TXO:
         c = cls(tx_hash,n,amount,address,time)
         return c
     def get_inputs(self,d=1):
-        lists=[]
+        # lists=[]
         tx = rpc_connection.getrawtransaction(self.tx_hash,True)
         #YOUR CODE HERE
 
