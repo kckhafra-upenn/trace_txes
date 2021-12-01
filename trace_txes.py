@@ -71,7 +71,7 @@ class TXO:
             
             self.inputs.append(self)
             # print("Input: ",self.inputs[0])
-            if count==(d-1):
+            if count==(d):
                 break
         print("TIME: ",self.time)
         print("HASH: ",self.tx_hash)
