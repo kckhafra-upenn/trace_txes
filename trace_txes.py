@@ -43,20 +43,11 @@ class TXO:
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         amount = 0
         address = ""
-        print("TAX: ",tx)
-        print("TAX-add: ",tx["hash"])
-        print("TIME: ",tx["time"])
-        print("TIME-DATE: ",datetime.fromtimestamp(tx["time"]))
         time = datetime.fromtimestamp(tx["time"])
         for t in tx["vout"]:
-            print("T-N: ",t["n"])
             if(n==t["n"]):
-                print("VALUE: ",t["value"])
                 amount = int(str(t["value"]).replace(".",""))
-                print("ADDY: ",t["scriptPubKey"]["addresses"][0])
                 address = t["scriptPubKey"]["addresses"][0]
-                
-        
         c = cls(tx_hash,n,amount,address,time)
         return c
     # def get_inputs(self,d=1):
