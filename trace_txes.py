@@ -59,7 +59,6 @@ class TXO:
         address = ""
         time = datetime.fromtimestamp(tx["time"])
         for t in tx["vout"]:
-            count=+1
             print("COUNT: ",count)
             amount = int(str(t["value"]).replace(".",""))
             address = t["scriptPubKey"]["addresses"][0]
@@ -71,6 +70,7 @@ class TXO:
             
             self.inputs.append(self)
             # print("Input: ",self.inputs[0])
+            count=+1
             if count==(d-1):
                 break
         print("TIME: ",self.time)
