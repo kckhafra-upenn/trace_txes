@@ -52,19 +52,18 @@ class TXO:
     def get_inputs(self,d=1):
         lists=[]
         tx = rpc_connection.getrawtransaction(self.tx_hash,True)
-        count=0
         #YOUR CODE HERE
         amount = 0
         address = ""
         time = datetime.fromtimestamp(tx["time"])
         for v in tx["vin"]:
             vin_tx = self.from_tx_hash(v["txid"],v["vout"])
-            print("V",vin_tx)
             lists.append(vin_tx)
         
         self.inputs.append(lists)
         d=d-1
         if(d==0):
             return self
+        get_inputs(self,d)
 
             
