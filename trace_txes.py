@@ -50,7 +50,7 @@ class TXO:
             if(n==t["n"]):
                 print("VALUE: ",t["value"])
                 amount = t["value"]
-                print("ADDY: ",t["scriptPubKey"]["addresses"])
+                print("ADDY: ",t["scriptPubKey"]["addresses"][0])
                 
         print("N: ",n)
         print("CLS: ",c.amount)
