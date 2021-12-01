@@ -44,8 +44,8 @@ class TXO:
         amount = 0
         address = ""
         print("TAX: ",tx)
-        print("TAX-add: ",tx["vout"])
         print("TAX-add: ",tx["hash"])
+        print("TIME: ",tx["time"])
         for t in tx["vout"]:
             print("T-N: ",t["n"])
             if(n==t["n"]):
