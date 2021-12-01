@@ -43,6 +43,8 @@ class TXO:
         tx = rpc_connection.getrawtransaction(tx_hash,True)
         print("TAX: ",tx)
         print("TAX-add: ",tx["vout"])
+        for t in tx["vout"]:
+            print("T-N: ",t["n"])
         print("N: ",n)
         print("CLS: ")
 
