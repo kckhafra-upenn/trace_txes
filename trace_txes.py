@@ -66,5 +66,5 @@ class TXO:
             self.inputs.append(self)
             if count==(d):
                 break
-        return self.inputs
+        return self
             
