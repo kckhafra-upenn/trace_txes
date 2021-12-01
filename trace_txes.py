@@ -50,6 +50,7 @@ class TXO:
         c = cls(tx_hash,n,amount,address,time)
         return c
     def get_inputs(self,d=1):
+        lists=[]
         tx = rpc_connection.getrawtransaction(self.tx_hash,True)
         count=0
         #YOUR CODE HERE
@@ -57,7 +58,9 @@ class TXO:
         address = ""
         time = datetime.fromtimestamp(tx["time"])
         for v in tx["vin"]:
-            print("V",v)
+            vin_tx = self.from_tx_hash(v["txid"],v["vout"])
+            print("V",vin_tx)
+            lists.append(vin_tx)
             # count=count+1
             # amount = int(str(t["value"]).replace(".",""))
             # address = t["scriptPubKey"]["addresses"][0]
@@ -67,5 +70,10 @@ class TXO:
             # self.inputs.append(self)
             # if count==(d):
             #     break
-        return self
+        
+        self.inputs.append(lists)
+        d=d-1
+        if(d=0):
+            return self
+
             
