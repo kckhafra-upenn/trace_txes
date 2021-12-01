@@ -52,6 +52,7 @@ class TXO:
     def get_inputs(self,d=1):
         pass
         #YOUR CODE HERE
+        print("D",d)
         for i in range(d):
             self.inputs.append(self)
             print("SELF: ",self.inputs)
